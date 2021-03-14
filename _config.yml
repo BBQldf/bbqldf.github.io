@@ -1,5 +1,6 @@
 # Site settings
-title: personal Blog    "#123456"
+title: personal Blog
+background:"#123456"
 SEOTitle: DDDDDDDDDF的博客
 header-img: img/iot-background-with-hand-drawn-elements.jpg
 email: CCCC@gmail.com
