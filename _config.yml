@@ -1,6 +1,5 @@
 # Site settings
 title: personal Blog
-background:"#123456"
 SEOTitle: DDDDDDDDDF的博客
 header-img: img/iot-background-with-hand-drawn-elements.jpg
 email: CCCC@gmail.com
@@ -92,7 +91,7 @@ featured-condition-size: 1              # 相同标签数量大于这个数，�
 
 
 # Progressive Web Apps
-chrome-tab-theme-color: "#000000"
+chrome-tab-theme-color: "#FFFFFF"
 service-worker: true
 
 
