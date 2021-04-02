@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      a thankful note
-//subtitle:   fan
+subtitle:   感谢
 date:       2021-03-01
 author:     bbq
 header-img: img/thankyou.png
