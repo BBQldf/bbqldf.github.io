@@ -8,7 +8,7 @@ header-img: img/thankyou.png
 catalog: true
 tags:
     - reference
-	- setup
+    - setup
 ---
 	
 	
