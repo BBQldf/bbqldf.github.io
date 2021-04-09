@@ -1,5 +1,5 @@
 
-
+<!--
 ![](https://raw.githubusercontent.com/qiubaiying/qiubaiying.github.io/master/img/readme-home.png)
 
 [![Build Status](https://travis-ci.org/qiubaiying/qiubaiying.github.io.svg?branch=master)](https://travis-ci.org/qiubaiying/qiubaiying.github.io)
@@ -279,4 +279,8 @@ ga_domain: huangxuan.me			# 默认的是 auto, 这里我是自定义了的域名
 ## License
 
 遵循 MIT 许可证。有关详细,请参阅 [LICENSE](https://github.com/qiubaiying/qiubaiying.github.io/blob/master/LICENSE)。
+-->
+Hello World！Hello Homepage！
+
+
 
