@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Smart Locks: Lessons for Securing Commodity Internet of Things Devices
+title:      Smart Locks-Lessons for Securing Commodity Internet of Things Devices
 subtitle:   UC Berkeley
 date:       2017-02-15
 author:     bbq
