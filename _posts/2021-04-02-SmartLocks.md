@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Smart
-subtitle:   UCBerkeley
+title:      Smart Locks: Lessons for Securing Commodity Internet of Things Devices
+subtitle:   UC Berkeley
 date:       2017-02-15
 author:     bbq
 header-img: img/post-bg-hacker.jpg
@@ -11,7 +11,7 @@ tags:
     - IoT
     - attacks
 ---
-
+	
 >authors: Grant Ho,Derek Leung, Pratyush Mishra，Ashkan Hosseini,Dawn Song,David Wagner
 
 >ABSTRACT——本文研究了市场上的五款智能门锁，发现了这些智能门锁在设计、部署、交互模型上存在的漏洞。实现了几种攻击并提供了一些防护方案。
