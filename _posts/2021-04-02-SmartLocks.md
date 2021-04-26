@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Smart Locks: Lessons for Securing Commodity Internet of Things Devices
-subtitle:   UC Berkeley
+title:      Smart
+subtitle:   UCBerkeley
 date:       2017-02-15
 author:     bbq
 header-img: img/post-bg-hacker.jpg
