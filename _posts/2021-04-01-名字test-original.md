@@ -4,22 +4,14 @@ title:      symbol-test-original——compare——特殊字符测试《·~！@#
 subtitle:   《·~！@#￥%……&*（）》[]“”""<>《》？//、\\||::@#$：：%^&*()
 date:       2013-01-17
 author:     Transliteration
-header-img: img/post-bg-ios9-web.jpg
+header-img: img/post-bg-symbols.jpg
 catalog: true
 tags:
     - test
-    - 学术指导与经验分享
-    - survey 
+    - setup 
 ---
 	
-# 前言
-
-硕士生的三大法宝：**English, Mathmetics,Programming**.
-
-在网上看了两个关于此方面的文章，感觉挺不错的，[转载](https://www.douban.com/group/topic/36085879/)到这里。
-
-首先是[台大资管系主任庄裕泽教授](https://management.ntu.edu.tw/IM/faculty/teacher/sn/10)关于survey写给同学们的信件。
-
+# test records
 
 目前的情况是：
 1. title和subtitle的格式<font color=red>要一致</font>
@@ -28,4 +20,5 @@ tags:
 4. title可以有空格、下划线、破折号
 5. 现在测试能不能有中文的“！”和“，”、“？”、“——”、“顿号”————————事实证明是都可以（那么相应的英文也没问题）
 6. title的中英文都可以识别
-9. 特殊字符——斜杠（正反）、·~！@#￥%……&*（）(键盘1-9上面的字符中英文都可以)、|（绝对值符号）、《》<>、引号（中英文都可以）
+7. 特殊字符——斜杠（正反）、·~！@#￥%……&*（）(键盘1-9上面的字符中英文都可以)、|（绝对值符号）、《》<>、引号（中英文都可以）
+8. 《·~！@#￥%……&*（）》[]“”""<>《》？//、\\||::@#$：：%^&*()
