@@ -16,8 +16,6 @@ tags:
 >authors:Wei Zhang*,Yan Meng*,Yugeng Liu,Xiaokuan Zhang,Yinqian Zhang,Haojin Zhu†
 
 
-![](RackMultipart20210428-4-1skfu6u_html_26c1520e2ffdba81.png)
-
 >Abstract-智能家居是一种将大量的智能传感器和设备智能连接起来，以促进家电、照明、供暖和制冷系统以及安防和安全系统的自动化的新兴技术。我们的研究围绕三星SmartThings展开，这是目前智能家居平台中应用数量最多的智能家居平台。此前的研究已经揭示了SmartThings设计中的一些安全缺陷，这些缺陷使得恶意的智能家居应用（或SmartApps）可以拥有比设计更多的权限，并窃听或欺骗SmartThings平台中的事件。为了解决这些问题，本文利用侧信道推理能力设计并开发了一个被称为HoMonit的系统，从加密的无线流量中监控SmartApps。为了检测异常，HoMonit将从加密流量中推断出的SmartApps活动与其源代码或UI界面中规定的预期行为进行比较。为了评估HoMonit的有效性，我们分析了181个官方SmartApps，并对60个恶意SmartApps进行了评估，这些恶意SmartApps要么对智能设备进行超权限访问，要么进行事件欺骗攻击。评估结果表明，HoMonit能够有效验证SmartApps的工作逻辑，在检测SmartApp的不当行为方面达到了较高的准确性。
 
 # Introduction
