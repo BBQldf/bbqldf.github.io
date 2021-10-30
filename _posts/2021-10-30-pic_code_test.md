@@ -59,9 +59,10 @@ echo命令：
 
 加入图片：
 
-![截图](https://raw.githubusercontent.com/BBQldf/PicGotest/master/%7BPF7L)AF4TKNMV%24X~1HENVF.png?token=AKXBU55PFPPGVVF25EFKWF3BPST52)
-![截图](https://raw.githubusercontent.com/BBQldf/PicGotest/master/%7BPF7L)AF4TKNMV%24X%7E1HENVF.png?token=AKXBU57ZULJJ6A3BMYCVCX3BPSSJA)
-![qq图片](https://raw.githubusercontent.com/BBQldf/PicGotest/master/20211014161017.png?token=AKXBU57Q3BNSHOGNRV6JTJTBM7TCO)
+![截图-热点信息](https://raw.githubusercontent.com/BBQldf/PicGotest/master/%7BPF7L)AF4TKNMV%24X%7E1HENVF.png?token=AKXBU57ZULJJ6A3BMYCVCX3BPSSJA)
+![截图-论文](https://raw.githubusercontent.com/BBQldf/PicGotest/master/20211014161017.png?token=AKXBU57Q3BNSHOGNRV6JTJTBM7TCO)
+
+![qq图片](https://raw.githubusercontent.com/BBQldf/PicGotest/master/QQ%E5%9B%BE%E7%89%8720210706110800.jpg?token=AKXBU563N6KGAMVNJJYR4FLBM7SXE)
 
 ![qq图片2](https://raw.githubusercontent.com/BBQldf/PicGotest/master/QQ%E5%9B%BE%E7%89%8720210706110721.jpg?token=AKXBU5ZDSYOEPQGCROOVSK3BPSUFK)
 
