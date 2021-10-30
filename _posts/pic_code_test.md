@@ -3,7 +3,7 @@ layout:     post
 title:      图片代码测试
 subtitle:   利用typora和picGo上传代码和图片
 date:       2017-02-15
-author:     BY
+author:     ldf
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
 tags:
