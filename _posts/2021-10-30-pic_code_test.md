@@ -59,7 +59,7 @@ echo命令：
 
 加入图片：
 
-![截图-热点信息](https://raw.githubusercontent.com/BBQldf/PicGotest/master/%7BPF7L)AF4TKNMV%24X%7E1HENVF.png?token=AKXBU57ZULJJ6A3BMYCVCX3BPSSJA)
+![热点信息](https://raw.githubusercontent.com/BBQldf/PicGotest/master/hotpots.png)
 ![截图-论文](https://raw.githubusercontent.com/BBQldf/PicGotest/master/20211014161017.png?token=AKXBU57Q3BNSHOGNRV6JTJTBM7TCO)
 
 ![qq图片](https://raw.githubusercontent.com/BBQldf/PicGotest/master/QQ%E5%9B%BE%E7%89%8720210706110800.jpg?token=AKXBU563N6KGAMVNJJYR4FLBM7SXE)
