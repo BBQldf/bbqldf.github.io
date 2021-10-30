@@ -1,15 +1,14 @@
 ---
 layout:     post
-title:      Git指令整理
-subtitle:   不适合阅读的整理的一些个人常用的 Git 指令
+title:      图片代码测试
+subtitle:   利用typora和picGo上传代码和图片
 date:       2017-02-15
 author:     BY
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
 tags:
-    - Mac
-    - 终端
-    - Git
+    - code
+    - test
 ---
 
 >测试一下加图片和code格式（应该是可以的）
