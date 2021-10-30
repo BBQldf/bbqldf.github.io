@@ -63,5 +63,7 @@ echo命令：
 
 ![qq图片](https://raw.githubusercontent.com/BBQldf/PicGotest/master/20211014161017.png?token=AKXBU57Q3BNSHOGNRV6JTJTBM7TCO)
 
-![qq图片2](https://raw.githubusercontent.com/BBQldf/PicGotest/master/QQ%E5%9B%BE%E7%89%8720210706110800.jpg?token=AKXBU563N6KGAMVNJJYR4FLBM7SXE)
+![qq图片2](https://raw.githubusercontent.com/BBQldf/PicGotest/master/QQ%E5%9B%BE%E7%89%8720210706110721.jpg?token=AKXBU5ZDSYOEPQGCROOVSK3BPSUFK)
+
+![qq图片2副本-测试中文路径](https://raw.githubusercontent.com/BBQldf/PicGotest/master/QQ图片20210706110721.jpg?token=AKXBU5ZDSYOEPQGCROOVSK3BPSUFK)
 
