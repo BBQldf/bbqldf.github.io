@@ -685,7 +685,7 @@ public class BookController {
 
 ![](https://raw.githubusercontent.com/BBQldf/PicGotest/master/20211216215024.png)
 
-<font size="5">Error!!!解决方案参考[这里~](https://bbqldf.github.io/2021/12/12/springMVC%E5%9F%BA%E7%A1%8001-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/)</font>
+<font size="5">Error!!!解决方案参考[这里~](https://bbqldf.github.io/2021/12/18/springMVC%E5%9F%BA%E7%A1%8005-SSM%E6%8E%92%E9%94%99/)</font>
 
 ### 2). 美化jsp页面
 
@@ -963,15 +963,28 @@ Books queryBookByName(String bookName);
 
    3.1编写servlet
 
+```java
+//    6. 实现功能：  6.1 从主界面获得要书籍的id，并跳转回主界面；
+    @RequestMapping("/query")
+    public String queryBook(String querryBookName, Model model) {
+        System.out.println("querryBookName:"+querryBookName);
+        Books book_query = bookService.queryBookByName(querryBookName);/*先把这本书的信息取出来*/
+        System.out.println("books=>"+book_query);
+
+        //1. 调用业务层的方法，
+        List<Books> lst_query = new ArrayList<Books>();
+        lst_query.add(book_query);
+       // 2. 把结果返回给前端
+        if (book_query==null){  //如果没查到，就返回全部书籍信息，并显示错误信息！
+            lst_query = bookService.queryAllBook();
+            System.out.println("没找到！");
+            model.addAttribute("error","未查到名为“"+querryBookName+"“的书籍");
+        }
+        model.addAttribute("listmsg",lst_query);        //这个要和前面的查询所有书籍的名字一致；因为表单里面是直接引用的这个
+
+       return "searchBook";
+    }
 ```
-
-```
-
-
-
-
-
-
 
 3. **前端——调用Controller**
 
@@ -1242,10 +1255,6 @@ public class BookController {
 
 
 <font size="5">学到这里，大家已经可以进行基本网站的单独开发。但是这只是增删改查的<font color="red">基本操作~~~</font></font>
-
-
-
-
 
 
 
