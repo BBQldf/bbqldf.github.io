@@ -10,6 +10,7 @@ tags:
     - java基础
     - springMVC
     - code
+
 ---
 
 
@@ -944,7 +945,7 @@ ok!数据库这里就改完了，后面就是把上面的接口接入service层
 
 1. **service层——调用dao层**
 
-    2.1 把queryBookByName方法放到BookService中
+   2.1 把queryBookByName方法放到BookService中
 
 ```java
 Books queryBookByName(String bookName);
@@ -1259,6 +1260,4 @@ public class BookController {
 
 
 
-
-
-
+​	
