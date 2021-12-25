@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:     springMVC基础04
-subtitle:   springMVC-异步
+title:     springMVC基础06
+subtitle:   springMVC-总结
 date:       2021-12-19
 author:     ldf
 header-img: img/post-bg-springMVC01.jpg
