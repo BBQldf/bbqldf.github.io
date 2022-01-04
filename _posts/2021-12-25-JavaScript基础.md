@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:     springMVC基础04
-subtitle:   springMVC-异步
-date:       2021-12-19
+title:     JavaScript基础
+subtitle:   JavaScript-基本框架、BoM、DoM、JQuery等
+date:       2021-12-25
 author:     ldf
 header-img: img/post-bg-JavaScript01.png
 catalog: true
