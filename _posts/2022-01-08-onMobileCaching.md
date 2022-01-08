@@ -8,7 +8,7 @@ header-img: img/post-bg-mobilecaching01.png
 catalog: true
 tags:
     - EdgeComputing
-    - DataPrivacy
+    - survey
 ---
 # 
 
