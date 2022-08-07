@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      IOTSAFE: Enforcing Safety and Security Policy with Real IoT Physical Interaction Discovery
+title:      IOTSAFE:Enforcing Safety and Security Policy with Real IoT Physical Interaction Discovery
 subtitle:   NDSS2021-dingwenbo-Huhongxin-chenglong-Clemon University&University at Buffalo
 date:       2021-01-13
 author:     bbq
@@ -11,7 +11,9 @@ tags:
     - IoT
     - attacks
 ---
-	
+
+
+
 >Abstract:提出了一个新颖的动态安全和保安政策执行系统，称为IOTSAFE，它可以在考虑到智能家居平台的上下文特征的情况下，捕捉和管理真实的物理互动。为了识别物联网设备的真实物理交互，我们提出了一种 **运行时物理交互发现方法，** 它采用了静态分析和动态测试技术来识别物联网设备之间的运行时物理交互。此外，IOTSAFE构建了 **时态物理交互的物理模型，** 可以预测即将到来的风险情况并相应地阻止不安全的设备状态。我们在SmartThings平台上实现了一个IOTSAFE的原型。我们的广泛评估表明，在我们的实验环境中，IOTSAFE在130个潜在互动中有效地识别了39个真实的物理互动。IOTSAFE还成功地预测了与 **时间性物理交互有关** 的风险情况，准确率接近96%，并防止了高风险的情况。（其实作为一个防御者，这个魔你还是可以的，但是能不能自动化地去模拟呢？他这里面会收集设备的更多的信息，这显然是目前平台无法提供的信息，比如加湿器放置的位置变化这种？人的移动这种，这是会面临的挑战吧）
 
 # I. INTRODUCTION
