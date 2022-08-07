@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Are you home alone?""Yes"-Disclosing Security and Privacy Vulnerabilities in Alexa Skills
+title:       "Are you home alone?""Yes"-Disclosing Security and Privacy Vulnerabilities in Alexa Skills
 subtitle:   Arxiv'20
 date:       2020-05-15
 author:     bbq
@@ -11,6 +11,8 @@ tags:
     - IoT
     - attacks
 ---
+
+
 
 >Abstract：作者指出了这种家庭助手存在的三个弱点：权限滥用（编理由来获取不必要的权限）、隐藏代码攻击（改后端代码）、隐藏的内容替换（把服务器端提供的内容换了）。作者表示这些攻击这几个弱点不仅不会在上架时被阻止，更可以随意操作应用的功能来套取个人信息，甚至进而从虚拟世界中转入现实中进行攻击。作者还做了实验调查33744个真实应用来证实这些弱点。
 
