@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:       "Are you home alone?""Yes"-Disclosing Security and Privacy Vulnerabilities in Alexa Skills
+title:      Are you home alone?Yes-Disclosing Security and Privacy Vulnerabilities in Alexa Skills
 subtitle:   Arxiv'20
 date:       2020-05-15
 author:     bbq
