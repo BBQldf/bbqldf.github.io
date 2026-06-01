@@ -2,7 +2,7 @@
 layout:     post
 title:      产品思维、架构设计与 vibe coding
 subtitle:   从产品视角到系统落地的个人观察和实践笔记
-date:       2026-06-02
+date:       2026-06-01
 author:     bbq
 header-img: img/post-bg-meeting-room.jpg
 catalog: true
