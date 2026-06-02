@@ -12,6 +12,13 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% for post in site.posts limit:10 %}
+      {% assign project_key = post.project | default: "default" %}
+      {% assign project_config = site.data.projects[project_key] %}
+      {% assign project_visible = true %}
+      {% if project_config and project_config.visible == false %}
+      {% assign project_visible = false %}
+      {% endif %}
+      {% if project_visible %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.content | xml_escape }}</description>
@@ -25,6 +32,7 @@ layout: null
         <category>{{ cat | xml_escape }}</category>
         {% endfor %}
       </item>
+      {% endif %}
     {% endfor %}
   </channel>
 </rss>

@@ -1,0 +1,63 @@
+<section class="knowledge-dashboard">
+    <hr>
+    <h5>EXPLORE</h5>
+    <div class="dashboard-links">
+        <a href="{{ site.baseurl }}/search/">Search</a>
+        <a href="{{ site.baseurl }}/archive/">Archives</a>
+        <a href="{{ site.baseurl }}/projects/">Projects</a>
+        <a href="{{ site.baseurl }}/tags/">Tags</a>
+    </div>
+</section>
+
+<section class="knowledge-dashboard">
+    <hr>
+    <h5>KNOWLEDGE DASHBOARD</h5>
+    <dl class="dashboard-stats">
+        <dt>Posts</dt>
+        <dd>{{ site.posts.size }}</dd>
+        <dt>Tags</dt>
+        <dd>{{ site.tags.size }}</dd>
+        <dt>Projects</dt>
+        <dd>{{ site.projects.size }}</dd>
+    </dl>
+</section>
+
+<section class="knowledge-dashboard">
+    <hr>
+    <h5>PROJECTS</h5>
+    <div class="dashboard-links">
+        {% for project in site.data.projects %}
+        {% assign project_key = project[0] %}
+        {% assign project_config = project[1] %}
+        {% assign project_docs = site.projects | where: "project", project_key %}
+        {% if project_key != "default" and project_config.visible != false and project_docs.size > 0 %}
+        <a href="{{ site.baseurl }}/projects/#{{ project_key }}">{{ project_config.name | default: project_key }}</a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+<style>
+.knowledge-dashboard .dashboard-links a {
+    display: block;
+    padding: 6px 0;
+    color: #808080 !important;
+}
+.knowledge-dashboard .dashboard-links a:hover {
+    color: #0085a1 !important;
+}
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px 12px;
+}
+.dashboard-stats dt {
+    color: #808080;
+    font-weight: 600;
+}
+.dashboard-stats dd {
+    margin: 0;
+    color: #0085a1;
+    font-weight: 700;
+}
+</style>

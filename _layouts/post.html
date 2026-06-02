@@ -2,6 +2,14 @@
 layout: default
 ---
 
+{% assign project_key = page.project | default: "default" %}
+{% assign project_config = site.data.projects[project_key] %}
+{% assign project_visible = true %}
+{% if project_config and project_config.visible == false %}
+{% assign project_visible = false %}
+{% endif %}
+
+{% if project_visible %}
 <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
 <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
@@ -61,25 +69,6 @@ layout: default
 				{{ content }}
 
                 <hr style="visibility: hidden;">
-
-                <ul class="pager">
-                    {% if page.previous.url %}
-                    <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
-                        Previous<br>
-                        <span>{{page.previous.title}}</span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    {% if page.next.url %}
-                    <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
-                        Next<br>
-                        <span>{{page.next.title}}</span>
-                        </a>
-                    </li>
-                    {% endif %}
-                </ul>
 
 
                 <!--Gitalk评论start  -->
@@ -146,7 +135,7 @@ layout: default
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
         				{% for tag in site.tags %}
-                            {% if tag[1].size > {{site.featured-condition-size}} %}
+                            {% if tag[1].size > site.featured-condition-size %}
                 				<a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
                                     {{ tag[0] }}
                                 </a>
@@ -155,6 +144,8 @@ layout: default
         			</div>
                 </section>
                 {% endif %}
+
+                {% include knowledge-dashboard.html %}
 
                 <!-- Friends Blog -->
                 {% if site.friends %}
@@ -225,4 +216,19 @@ layout: default
         }
     }
 </style>
+{% endif %}
+{% else %}
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if site.header-img %}{{ site.header-img }}{% else %}img/home-bg.jpg{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>内容暂未开放</h1>
+                    <h2 class="subheading">该项目当前已被隐藏</h2>
+                    <span class="meta">{{ project_config.name | default: project_key }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 {% endif %}

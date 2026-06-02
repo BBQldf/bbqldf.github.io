@@ -43,6 +43,13 @@ header-img: "img/tag-bg.jpg"
                     <span class="tag-text">{{ tag[0] }}</span>
                 </span>
 				{% for post in tag[1] %}
+                {% assign project_key = post.project | default: "default" %}
+                {% assign project_config = site.data.projects[project_key] %}
+                {% assign project_visible = true %}
+                {% if project_config and project_config.visible == false %}
+                {% assign project_visible = false %}
+                {% endif %}
+                {% if project_visible %}
 				  <!-- <li class="listing-item">
 				  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
 				  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
@@ -61,6 +68,7 @@ header-img: "img/tag-bg.jpg"
 				    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
 				</div>
 				<hr>
+                {% endif %}
 				{% endfor %}
 			</div>
 			{% endfor %}

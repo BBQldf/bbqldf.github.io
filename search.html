@@ -1,0 +1,97 @@
+---
+title: Search
+layout: page
+description: 搜索标题、标签、项目和正文摘要
+header-img: "img/tag-bg.jpg"
+---
+
+<div class="search-box">
+    <input id="search-input" type="search" class="form-control" placeholder="输入关键词，例如 RAG、秒杀、Git、Agent">
+    <p id="search-count" class="text-muted">输入关键词开始搜索</p>
+</div>
+
+<div id="search-results"></div>
+
+<script>
+(function () {
+    var input = document.getElementById('search-input');
+    var count = document.getElementById('search-count');
+    var results = document.getElementById('search-results');
+    var posts = [];
+
+    function normalize(text) {
+        return (text || '').toString().toLowerCase();
+    }
+
+    function render(items) {
+        if (!input.value.trim()) {
+            count.textContent = '输入关键词开始搜索';
+            results.innerHTML = '';
+            return;
+        }
+
+        count.textContent = '找到 ' + items.length + ' 篇文章';
+        results.innerHTML = items.map(function (post) {
+            return [
+                '<div class="post-preview search-result">',
+                '<a href="' + post.url + '">',
+                '<h2 class="post-title">' + post.title + '</h2>',
+                post.subtitle ? '<h3 class="post-subtitle">' + post.subtitle + '</h3>' : '',
+                '<div class="post-content-preview">' + post.content + '</div>',
+                '</a>',
+                '<p class="post-meta">' + post.date + (post.tags ? ' · ' + post.tags : '') + '</p>',
+                '</div><hr>'
+            ].join('');
+        }).join('');
+    }
+
+    function search() {
+        var query = normalize(input.value.trim());
+        if (!query) {
+            render([]);
+            return;
+        }
+
+        var terms = query.split(/\s+/).filter(Boolean);
+        var matched = posts.filter(function (post) {
+            var haystack = normalize([
+                post.title,
+                post.subtitle,
+                post.date,
+                post.project,
+                post.tags,
+                post.content
+            ].join(' '));
+            return terms.every(function (term) {
+                return haystack.indexOf(term) >= 0;
+            });
+        }).slice(0, 50);
+
+        render(matched);
+    }
+
+    fetch('{{ site.baseurl }}/search.json')
+        .then(function (response) { return response.json(); })
+        .then(function (data) {
+            posts = data;
+            input.addEventListener('input', search);
+            search();
+        })
+        .catch(function () {
+            count.textContent = '搜索索引加载失败';
+        });
+})();
+</script>
+
+<style>
+.search-box {
+    margin-bottom: 26px;
+}
+.search-box input {
+    height: 46px;
+    border-radius: 4px;
+}
+.search-result .post-title {
+    font-size: 22px;
+}
+</style>

@@ -3,6 +3,34 @@ layout: page
 description: "曾经那么盼望的未来，正以惊人的速度流逝着!"
 ---
 
+{% assign featured_posts = site.posts | where: "featured", true | sort: "featured_rank" %}
+{% if featured_posts.size > 0 and paginator.page == 1 %}
+<section class="featured-panel">
+    <div class="featured-kicker">Evergreen / Featured</div>
+    <h2>推荐文章</h2>
+    <div class="featured-grid">
+        {% for post in featured_posts limit:6 %}
+        {% assign project_key = post.project | default: "default" %}
+        {% assign project_config = site.data.projects[project_key] %}
+        {% assign project_visible = true %}
+        {% if project_config and project_config.visible == false %}
+        {% assign project_visible = false %}
+        {% endif %}
+        {% if project_visible %}
+        <a class="featured-card" href="{{ post.url | prepend: site.baseurl }}">
+            <span class="featured-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            <strong>{{ post.title }}</strong>
+            {% if post.subtitle %}
+            <small>{{ post.subtitle }}</small>
+            {% endif %}
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+<hr>
+{% endif %}
+
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
@@ -27,16 +55,120 @@ description: "曾经那么盼望的未来，正以惊人的速度流逝着!"
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
-<ul class="pager">
+<nav class="text-center" aria-label="Page navigation">
+<ul class="pagination">
     {% if paginator.previous_page %}
-    <li class="previous">
+    <li>
         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
     </li>
+    {% else %}
+    <li class="disabled">
+        <span>&larr; Newer Posts</span>
+    </li>
     {% endif %}
+
+    {% assign left_window = paginator.page | minus: 2 %}
+    {% assign right_window = paginator.page | plus: 2 %}
+    {% assign left_gap_rendered = false %}
+    {% assign right_gap_rendered = false %}
+    {% for page in (1..paginator.total_pages) %}
+        {% assign show_page = false %}
+        {% if page == 1 or page == paginator.total_pages %}
+        {% assign show_page = true %}
+        {% elsif page >= left_window and page <= right_window %}
+        {% assign show_page = true %}
+        {% endif %}
+
+        {% if show_page == false and page < left_window and left_gap_rendered == false %}
+        <li class="disabled">
+            <span>...</span>
+        </li>
+        {% assign left_gap_rendered = true %}
+        {% elsif show_page == false and page > right_window and right_gap_rendered == false %}
+        <li class="disabled">
+            <span>...</span>
+        </li>
+        {% assign right_gap_rendered = true %}
+        {% endif %}
+
+        {% if show_page %}
+        {% if page == paginator.page %}
+        <li class="active">
+            <span>{{ page }}</span>
+        </li>
+        {% elsif page == 1 %}
+        <li>
+            <a href="{{ site.baseurl }}/">{{ page }}</a>
+        </li>
+        {% else %}
+        <li>
+            <a href="{{ site.baseurl }}/page{{ page }}">{{ page }}</a>
+        </li>
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+
     {% if paginator.next_page %}
-    <li class="next">
+    <li>
         <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% else %}
+    <li class="disabled">
+        <span>Older Posts &rarr;</span>
     </li>
     {% endif %}
 </ul>
+</nav>
 {% endif %}
+
+<style>
+.featured-panel {
+    margin: 0 0 28px;
+}
+.featured-kicker {
+    color: #0085a1;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.featured-panel h2 {
+    margin: 6px 0 18px;
+    font-size: 24px;
+}
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+.featured-card {
+    display: block;
+    min-height: 132px;
+    padding: 16px;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    text-decoration: none;
+    background: #fff;
+}
+.featured-card:hover {
+    border-color: #0085a1;
+    text-decoration: none;
+}
+.featured-card strong {
+    display: block;
+    margin: 6px 0 8px;
+    color: #404040;
+    font-size: 17px;
+    line-height: 1.35;
+}
+.featured-card small,
+.featured-date {
+    color: #888;
+    font-size: 12px;
+}
+@media (max-width: 767px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
