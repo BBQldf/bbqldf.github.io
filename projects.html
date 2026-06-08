@@ -6,12 +6,14 @@ header-img: "img/tag-bg.jpg"
 ---
 
 <div class="project-list">
+{% assign visible_project_count = 0 %}
 {% for project in site.data.projects %}
 {% assign project_key = project[0] %}
 {% assign project_config = project[1] %}
 {% if project_key != "default" and project_config.visible != false %}
 {% assign project_posts = site.projects | where: "project", project_key | sort: "date" | reverse %}
 {% if project_posts.size > 0 %}
+{% assign visible_project_count = visible_project_count | plus: 1 %}
 <section class="project-section" id="{{ project_key }}">
     <h2>{{ project_config.name | default: project_key }}</h2>
     {% if project_config.description %}
@@ -29,9 +31,15 @@ header-img: "img/tag-bg.jpg"
 {% endif %}
 {% endif %}
 {% endfor %}
+{% if visible_project_count == 0 %}
+<p class="text-muted project-empty">项目内容暂未开放。</p>
+{% endif %}
 </div>
 
 <style>
+.project-empty {
+    margin: 34px 0;
+}
 .project-section {
     margin-bottom: 42px;
 }

@@ -6,16 +6,16 @@ dashboard:
   name: Dashboard
   description: 项目级内容集合，用于管理 Dashboard 相关方案、复盘和设计文档。
   order: 1
-  visible: true
+  visible: false
 
 ai:
   name: AI
   description: AI 工程化实践集合，用于沉淀 LLM、RAG、Agent、缓存和本地部署相关内容。
   order: 2
-  visible: true
+  visible: false
 
 self:
   name: Self
   description: 个人观察、组织思考、AI 职业触动与自我复盘类内容集合。
   order: 3
-  visible: true
+  visible: false
