@@ -9,7 +9,7 @@ description: "曾经那么盼望的未来，正以惊人的速度流逝着!"
     <div class="featured-kicker">Evergreen / Featured</div>
     <h2>推荐文章</h2>
     <div class="featured-grid">
-        {% for post in featured_posts limit:6 %}
+        {% for post in featured_posts limit:12 %}
         {% assign project_key = post.project | default: "default" %}
         {% assign project_config = site.data.projects[project_key] %}
         {% assign project_visible = true %}
@@ -123,28 +123,28 @@ description: "曾经那么盼望的未来，正以惊人的速度流逝着!"
 
 <style>
 .featured-panel {
-    margin: 0 0 28px;
+    margin: 0 0 20px;
 }
 .featured-kicker {
     color: #0085a1;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: .6px;
     text-transform: uppercase;
 }
 .featured-panel h2 {
-    margin: 6px 0 18px;
-    font-size: 24px;
+    margin: 4px 0 12px;
+    font-size: 20px;
 }
 .featured-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
 }
 .featured-card {
     display: block;
-    min-height: 132px;
-    padding: 16px;
+    min-height: 92px;
+    padding: 10px 12px;
     border: 1px solid #e8e8e8;
     border-radius: 6px;
     text-decoration: none;
@@ -156,19 +156,34 @@ description: "曾经那么盼望的未来，正以惊人的速度流逝着!"
 }
 .featured-card strong {
     display: block;
-    margin: 6px 0 8px;
+    margin: 4px 0 5px;
     color: #404040;
-    font-size: 17px;
-    line-height: 1.35;
+    font-size: 15px;
+    line-height: 1.3;
 }
 .featured-card small,
 .featured-date {
     color: #888;
-    font-size: 12px;
+    font-size: 11px;
+    line-height: 1.35;
+}
+.featured-card small {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+@media (max-width: 991px) {
+    .featured-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 @media (max-width: 767px) {
     .featured-grid {
         grid-template-columns: 1fr;
+    }
+    .featured-card {
+        min-height: 0;
     }
 }
 </style>
